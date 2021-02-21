@@ -67,7 +67,11 @@ body, p {
 
 .p-heading {
 	margin-bottom: 3.5rem;
-	text-align: center;
+}
+
+.p-heading-title {
+	margin-bottom: 3.5rem;
+	text-align: left;
 }
 
 .li-space-lg li {
@@ -893,7 +897,6 @@ input[type='checkbox'] {
 	margin-bottom: 0.625rem;
 }
 
-
 /************************/
 /*     07. Services     */
 /************************/
@@ -1264,6 +1267,10 @@ input[type='checkbox'] {
 
 .form-1 .text-container {
 	margin-bottom: 4rem;
+}
+
+.form-1 .text-container p {
+	color: #fff;
 }
 
 .form-1 .section-title {
