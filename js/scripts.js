@@ -174,7 +174,7 @@
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
             lformError();
-            lsubmitMSG(false, "Please fill all fields!");
+            lsubmitMSG(false, "Completa los campos.");
         } else {
             // everything looks good!
             event.preventDefault();
@@ -232,7 +232,7 @@
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
             cformError();
-            csubmitMSG(false, "Please fill all fields!");
+            csubmitMSG(false, "Completa los campos.");
         } else {
             // everything looks good!
             event.preventDefault();
@@ -289,7 +289,7 @@
     	if (event.isDefaultPrevented()) {
             // handle the invalid form...
             pformError();
-            psubmitMSG(false, "Please fill all fields!");
+            psubmitMSG(false, "Completa los campos.");
         } else {
             // everything looks good!
             event.preventDefault();

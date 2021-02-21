@@ -13,6 +13,12 @@ if (empty($_POST["email"])) {
     $email = $_POST["email"];
 }
 
+if (empty($_POST["phone"])) {
+    $errorMSG = "Phone is required ";
+} else {
+    $phone = $_POST["phone"];
+}
+
 if (empty($_POST["message"])) {
     $errorMSG = "Message is required ";
 } else {
@@ -25,21 +31,24 @@ if (empty($_POST["terms"])) {
     $terms = $_POST["terms"];
 }
 
-$EmailTo = "yourname@domain.com";
-$Subject = "New message from Aria landing page";
+$EmailTo = "jmpg93@gmail.com";
+$Subject = "Contacto desde web Ellael";
 
 // prepare email body text
 $Body = "";
-$Body .= "Name: ";
+$Body .= "Nombre: ";
 $Body .= $name;
 $Body .= "\n";
 $Body .= "Email: ";
 $Body .= $email;
 $Body .= "\n";
-$Body .= "Message: ";
+$Body .= "Teléfono: ";
+$Body .= $phone;
+$Body .= "\n";
+$Body .= "Manesaje: ";
 $Body .= $message;
 $Body .= "\n";
-$Body .= "Terms: ";
+$Body .= "Terminos: ";
 $Body .= $terms;
 $Body .= "\n";
 
