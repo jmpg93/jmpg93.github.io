@@ -4,31 +4,50 @@
     "items": [
         {
             "title": "INICIO",
-            "link": "#inicio"
+            "link": "#inicio",
+            "dropdowns": []
         },
         {
             "title": "ESTÉTICA AVANZADA",
-            "link": "#estetica-avanzada"
+            "link": "#estetica-avanzada",
+            "dropdowns": []
         },
         {
             "title": "TRATAMIENTOS",
-            "link": "#tratamientos"
+            "link": "#tratamientos",
+            "dropdowns": [
+                {
+                    "title": "FACIALES",
+                    "link": "#faciales"
+                },
+                {
+                    "title": "CORPORALES",
+                    "link": "#corporales"
+                },                {
+                    "title": "APARATOLOGÍA",
+                    "link": "#aparatologia"
+                }
+            ]
         },
         {
             "title": "DEPILACIÓN LASER",
-            "link": "#depilacion"
+            "link": "#depilacion",
+            "dropdowns": []
         },
         {
             "title": "TARIFAS",
-            "link": "#tarifas"
+            "link": "#tarifas",
+            "dropdowns": []
         },
         {
             "title": "¿DÓNDE ESTAMOS?",
-            "link": "#localizacion"
+            "link": "#localizacion",
+            "dropdowns": []
         },
         {
             "title": "CONTACTO",
-            "link": "#contacto"
+            "link": "#contacto",
+            "dropdowns": []
         }
     ]
 }

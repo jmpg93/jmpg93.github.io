@@ -2,9 +2,12 @@
 	"id": "tratamientos",
 	"title": "Tratamientos",
 	"body": "Ofrecemos todo tipo de tratamientos",
+	"button": "SABER MÁS",
+	"buttonURL": "#localizacion",
 	"sections": [
 		{
 			"title": "Tratamientos faciales",
+			"id": "faciales",
 			"items": [
 				{
 					"image": "images/facial-2.png",
@@ -85,6 +88,7 @@
 		},
 		{
 			"title": "Tratamientos con aparatología",
+			"id": "aparatología",
 			"items": [
 				{
 					"image": "images/preso.png",
@@ -116,11 +120,12 @@
 					"price": 75,
 					"bullets": [
 					]
-				},
+				}
 			]
 		},
 		{
 			"title": "Tratamientos corporales",
+			"id": "corporales",
 			"items": [
 				{
 					"image": "images/body-2.png",

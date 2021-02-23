@@ -72,9 +72,23 @@ layout: default
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
                 {% for item in site.data.navbar.items %}
+                {% if item.dropdowns == empty %}
                 <li class="nav-item">
                     <a class="nav-link page-scroll" href="{{item.link}}">{{item.title}}</a>
                 </li>
+                {% else %}
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle page-scroll" href="#about" id="navbarDropdown" role="button"
+                        aria-haspopup="true" aria-expanded="false">{{item.title}}</a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        {% for dropdown in item.dropdowns %}
+                        <a class="dropdown-item" href="{{dropdown.link}}"><span class="item-text">{{dropdown.title}}</span></a>
+                        <div class="dropdown-items-divide-hr"></div>
+                        {% endfor %}
+                    </div>
+                </li>
+                {% endif %}
                 {% endfor %}
             </ul>
             <span class="nav-item social-icons">
@@ -147,7 +161,7 @@ layout: default
 
             <!-- start of row -->
             {% for section in site.data.treatments.sections %}
-            <div class="row">
+            <div id="{{section.id}}" class="row">
                 <h2>{{section.title}}</h2>
                 <div class="col-lg-12">
                     {% for treatment in section.items %}
@@ -170,7 +184,7 @@ layout: default
                             <p class="price">Desde <span>{{treatment.price}}€</span></p>
                         </div>
                         <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#location">SABER MÁS</a>
+                            <a class="btn-solid-reg page-scroll" href="{{site.data.treatments.buttonURL}}">{{site.data.treatments.button}}</a>
                         </div> <!-- end of button-container -->
                     </div>
                     <!-- end of card -->
@@ -272,9 +286,7 @@ layout: default
 
         <!-- Portugal -->
         <div id="details" class="accordion">
-            <iframe class="area-1"
-                src="{{site.data.location.portugal.locationURL}}"
-                frameborder="0">
+            <iframe class="area-1" src="{{site.data.location.portugal.locationURL}}" frameborder="0">
             </iframe><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
                 <!-- Accordion -->
                 <div class="accordion-container" id="accordionOne">
@@ -321,7 +333,8 @@ layout: default
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
                             data-parent="#accordionOne">
                             <div class="accordion-body">
-                                {{site.data.location.portugal.mobile.details}} <a href="tel:0034{{site.data.location.portugal.mobile.value | strip}}">{{site.data.location.portugal.mobile.value}}</a>.
+                                {{site.data.location.portugal.mobile.details}} <a
+                                    href="tel:0034{{site.data.location.portugal.mobile.value | strip}}">{{site.data.location.portugal.mobile.value}}</a>.
                             </div>
                         </div>
                     </div> <!-- end of item -->
@@ -337,7 +350,8 @@ layout: default
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
                             data-parent="#accordionOne">
                             <div class="accordion-body">
-                                {{site.data.location.portugal.mobile.details}} <a href="tel:0034{{site.data.location.portugal.landline.value | strip}}">{{site.data.location.portugal.landline.value}}</a>.
+                                {{site.data.location.portugal.mobile.details}} <a
+                                    href="tel:0034{{site.data.location.portugal.landline.value | strip}}">{{site.data.location.portugal.landline.value}}</a>.
                             </div>
                         </div>
                     </div><!-- end of item -->
@@ -394,7 +408,8 @@ layout: default
                         <div id="collapseThreeCC" class="collapse" aria-labelledby="headingThreeCC"
                             data-parent="#accordionTwo">
                             <div class="accordion-body">
-                                {{site.data.location.loranca.mobile.details}} <a href="tel:0034{{site.data.location.loranca.mobile.value | strip}}">{{site.data.location.loranca.mobile.value}}</a>.
+                                {{site.data.location.loranca.mobile.details}} <a
+                                    href="tel:0034{{site.data.location.loranca.mobile.value | strip}}">{{site.data.location.loranca.mobile.value}}</a>.
                             </div>
                         </div>
                     </div><!-- end of item -->
@@ -410,16 +425,16 @@ layout: default
                         <div id="collapseFourCC" class="collapse" aria-labelledby="headingFour"
                             data-parent="#accordionOne">
                             <div class="accordion-body">
-                                {{site.data.location.loranca.landline.details}} <a href="tel:0034{{site.data.location.loranca.landline.value | strip}}">{{site.data.location.loranca.landline.value}}</a>.
+                                {{site.data.location.loranca.landline.details}} <a
+                                    href="tel:0034{{site.data.location.loranca.landline.value | strip}}">{{site.data.location.loranca.landline.value}}</a>.
                             </div>
                         </div>
                     </div><!-- end of item -->
                 </div><!-- end of accordion-container -->
                 <!-- end of accordion -->
             </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><iframe
-                class="area-2"
-                src="{{site.data.location.loranca.locationURL}}"
-                frameborder="0"></iframe><!-- end of area-2 -->
+                class="area-2" src="{{site.data.location.loranca.locationURL}}" frameborder="0"></iframe>
+            <!-- end of area-2 -->
         </div><!-- end of tabs -->
         <!-- end of details 2 -->
     </div> <!-- end of filter -->
