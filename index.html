@@ -1,41 +1,50 @@
+---
+title: Ellael
+layout: default
+---
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Centros Ellael - Depilación Laser y Estética Avanzada">
     <meta name="author" content="Ellael">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
-	<meta property="og:site_name" content="" /> <!-- website name -->
-	<meta property="og:site" content="" /> <!-- website link -->
-	<meta property="og:title" content=""/> <!-- title shown in the actual shared post -->
-	<meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
-	<meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
-	<meta property="og:url" content="" /> <!-- where do you want your post to link to -->
-	<meta property="og:type" content="article" />
+    <meta property="og:site_name" content="" /> <!-- website name -->
+    <meta property="og:site" content="" /> <!-- website link -->
+    <meta property="og:title" content="" /> <!-- title shown in the actual shared post -->
+    <meta property="og:description" content="" /> <!-- description shown in the actual shared post -->
+    <meta property="og:image" content="" /> <!-- image link, make sure it's jpg -->
+    <meta property="og:url" content="" /> <!-- where do you want your post to link to -->
+    <meta property="og:type" content="article" />
 
     <!-- Website Title -->
     <title>Centros Ellael - Depilación Laser y Estética Avanzada</title>
-    
+
     <!-- Styles -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500,700&display=swap&subset=latin-ext"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600&display=swap&subset=latin-ext"
+        rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/fontawesome-all.css" rel="stylesheet">
     <link href="css/swiper.css" rel="stylesheet">
-	<link href="css/magnific-popup.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
-	
-	<!-- Favicon  -->
+    <link href="css/magnific-popup.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png">
 </head>
+
 <body data-spy="scroll" data-target=".fixed-top">
-    
+
     <!-- Preloader -->
-	<div class="spinner-wrapper">
+    <div class="spinner-wrapper">
         <div class="spinner">
             <div class="bounce1"></div>
             <div class="bounce2"></div>
@@ -43,7 +52,6 @@
         </div>
     </div>
     <!-- end of preloader -->
-    
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom fixed-top">
@@ -51,10 +59,11 @@
         <!-- <a class="navbar-brand logo-text page-scroll" href="index.html">Aria</a> -->
 
         <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"><img src="images/logo.png" alt="alternative"></a>
-        
+        <a class="navbar-brand logo-image" href="{{site.data.navbar.link}}"><img src="{{site.data.navbar.logo}}"></a>
+
         <!-- Mobile Menu Toggle Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-awesome fas fa-bars"></span>
             <span class="navbar-toggler-awesome fas fa-times"></span>
         </button>
@@ -62,28 +71,11 @@
 
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
             <ul class="navbar-nav ml-auto">
+                {% for item in site.data.navbar.items %}
                 <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#header">INICIO <span class="sr-only">(current)</span></a>
+                    <a class="nav-link page-scroll" href="{{item.link}}">{{item.title}}</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#estetica-avanzada">ESTÉTICA AVANZADA</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#tratamientos">TRATAMIENTOS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#depilacion">DEPILACIÓN LASER</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#tarifas">TARIFAS</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#location">¿DÓNDE ESTAMOS?</a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link page-scroll" href="#contact">CONTACTO</a>
-                </li>
+                {% endfor %}
             </ul>
             <span class="nav-item social-icons">
                 <span class="fa-stack">
@@ -103,27 +95,26 @@
     </nav> <!-- end of navbar -->
     <!-- end of navbar -->
 
-
-    <!-- Header -->
-    <header id="header" class="header">
+    <!-- Inicio -->
+    <header id="{{site.data.start.id}}" class="header">
         <div class="header-content">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="text-container">
-                            <h1><span id="js-rotating">DEPILACIÓN LASER, ESTÉTICA AVANZADA, TRATAMIENTOS PERSONALIZADOS, TERAPIAS, PROFESIONALIDAD, EXPERIENCIA </span></h1>
-                            <p class="p-heading p-large">Tratamientos de personalizados para él y para ella.</p>
-                            <a class="btn-solid-lg page-scroll" href="#estetica-avanzada">DESCUBRE</a>
+                            <h1><span id="js-rotating">{{site.data.start.titles}}</span></h1>
+                            <p class="p-heading p-large">{{site.data.start.subtitle}}</p>
+                            <a class="btn-solid-lg page-scroll"
+                                href="{{site.data.start.button.link}}">{{site.data.start.button.title}}</a>
                         </div>
                     </div> <!-- end of col -->
                 </div> <!-- end of row -->
             </div> <!-- end of container -->
         </div> <!-- end of header-content -->
     </header> <!-- end of header -->
-    <!-- end of header -->
+    <!-- end of Inicio -->
 
-
-    <!-- estetica-avanzada -->
+    <!-- Estetica-avanzada -->
     <div id="estetica-avanzada" class="basic-1">
         <div class="container">
             <div class="row">
@@ -131,7 +122,9 @@
                     <div class="text-container">
                         <div class="section-title">ESTÉTICA AVANZADA</div>
                         <h2>Sentirse bien es importante</h2>
-                        <p>Somos centros con más de 15 años de experiencia en el sector. Estamos especializados en depilación láser y estética avanzada, utilizando las últimas tecnologías en el mercado donde los tratamientos son personalizados y con resultados garantizados.</p>
+                        <p>Somos centros con más de 15 años de experiencia en el sector. Estamos especializados en
+                            depilación láser y estética avanzada, utilizando las últimas tecnologías en el mercado donde
+                            los tratamientos son personalizados y con resultados garantizados.</p>
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-7">
@@ -142,497 +135,319 @@
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of basic-1 -->
-    <!-- end of estetica-avanzada -->
+    <!-- end of Estetica-avanzada -->
 
-    <!-- depilacion -->
-    <div id="tratamientos" class="cards-2">
+    <!-- Tratamientos -->
+    <div id="{{site.data.treatments.id}}" class="cards-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="section-title">Tratamientos</div>
-                    <h2>Ofrecemos todo tipo de tratamientos<br> Elige el que necesites</h2>
+                    <div class="section-title">{{site.data.treatments.title}}</div>
+                    <h2>{{site.data.treatments.body}}</h2>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-            
-            <!-- ROW 1 -->
+
+            <!-- start of row -->
+            {% for section in site.data.treatments.sections %}
             <div class="row">
+                <h2>{{section.title}}</h2>
                 <div class="col-lg-12">
+                    {% for treatment in section.items %}
                     <!-- Card -->
                     <div class="card">
                         <div class="card-image">
-                            <img class="img-fluid" src="images/preso.png" alt="alternative">
+                            <img class="img-fluid" src="{{treatment.image}}" alt="alternative">
                         </div>
                         <div class="card-body">
-                            <h3 class="card-title">Presoterapia</h3>
-                            <p>Drenaje linfático. Indicado para:</p>
+                            <h3 class="card-title">{{treatment.name}}</h3>
+                            <p>{{treatment.description}}</p>
                             <ul class="list-unstyled li-space-lg">
+                                {% for bullet in treatment.bullets %}
                                 <li class="media">
                                     <i class="fas fa-square"></i>
-                                    <div class="media-body">Piernas cansadas.</div>
+                                    <div class="media-body">{{bullet}}</div>
                                 </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Arañitas vasculares.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Edemas.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Celulitis.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Acumulaciones de grasa.</div>
-                                </li>
+                                {% endfor %}
                             </ul>
-                            <p class="price">Desde <span>40€</span></p>
+                            <p class="price">Desde <span>{{treatment.price}}€</span></p>
                         </div>
                         <div class="button-container">
                             <a class="btn-solid-reg page-scroll" href="#location">SABER MÁS</a>
                         </div> <!-- end of button-container -->
                     </div>
                     <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/facial.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Tratamientos corporales y faciales</h3>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Remodelantes.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Reafirmantes.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Antiedad.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Efecto flash.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Iluminadores.</div>
-                                </li>
-                            </ul>
-                            <p class="price">Desde <span>40€</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#location">SABER MÁS</a>
-                        </div> <!-- end of button-container -->
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/crema.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Higiene personalizada</h3>
-                            <p>Adaptadas a las necesidades de tu piel</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Limpieza faciales.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Cremas personalizadas a tu tipo de piel.</div>
-                                </li>
-                            </ul>
-                            <p class="price">Desde <span>40€</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#location">SABER MÁS</a>
-                        </div> <!-- end of button-container -->
-                    </div>
-                    <!-- end of card -->
-
+                    {% endfor %}
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-
-            <!-- ROW 2 -->
-            <div class="row">
-                <div class="col-lg-12">
-                    
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/masaje.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Sesión de masajes</h3>
-                            <p>Libera tensiones y contracturas.</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Relajantes.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Descontracturantes.</div>
-                                </li>
-                            </ul>
-                            <p class="price">Desde <span>40€</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#location">SABER MÁS</a>
-                        </div> <!-- end of button-container -->
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/body.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Tratamientos de remodelación</h3>
-                            <p>Soluciones no invasivs para:</p>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Celulitis.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Reafirmar la piel.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Tonificar la musculatura.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Activar la circulación.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Estimula la perdida de peso.</div>
-                                </li>
-                            </ul>
-                            <p class="price">Desde <span>40€</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#location">SABER MÁS</a>
-                        </div> <!-- end of button-container -->
-                    </div>
-                    <!-- end of card -->
-
-                    <!-- Card -->
-                    <div class="card">
-                        <div class="card-image">
-                            <img class="img-fluid" src="images/body-2.png" alt="alternative">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Diagnostico Corporal</h3>
-                            <ul class="list-unstyled li-space-lg">
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Obten información de tu cuerpo.</div>
-                                </li>
-                                <li class="media">
-                                    <i class="fas fa-square"></i>
-                                    <div class="media-body">Calcula tu peso ideal.</div>
-                                </li>
-                            </ul>
-                            <p class="price">Desde <span>40€</span></p>
-                        </div>
-                        <div class="button-container">
-                            <a class="btn-solid-reg page-scroll" href="#location">SABER MÁS</a>
-                        </div> <!-- end of button-container -->
-                    </div>
-                    <!-- end of card -->
-
-                </div> <!-- end of col -->
-            </div> <!-- end of row -->
-
+            {% endfor %}
         </div> <!-- end of container -->
     </div> <!-- end of cards-2 -->
-    <!-- end of depilacion -->
+    <!-- end of Tratamientos -->
 
-       <!-- Testimonials -->
-       <div id="depilacion" class="slider">
+    <!-- Depilacion -->
+    <div id="{{site.data.depilation.id}}" class="slider">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>DEPILACIÓN LASER</h2>
-                    <p>En Centros Ellael, nuestro principal objetivo siempre ha sido acercar la belleza y el cuidado personal a los bolsillos de nuestros clientes. Queremos ayudar a todos nuestros clientes a que puedan alcanzar su imagen deseada, a tener un mejor aspecto físico y a sentirse bien consigo mismos por lo que ofrecemos un asesoramiento totalmente personalizado para cada tratamiento, con el fin de que el tratamiento que elija cada uno de nuestros clientes se adapte a sus necesidades. Para todo ello contamos con precios bastante asequibles para la depilación láser.</p>
+                    <h2>{{site.data.depilation.title}}</h2>
+                    <p>{{site.data.depilation.body}}</p>
+                    <br>
+                    <ul class="list-unstyled li-space-lg">
+                        {% for bullet in site.data.depilation.bullets %}
+                        <li class="media">
+                            <i class="fas fa-square"></i>
+                            <div class="media-body">{{bullet}}</div>
+                        </li>
+                        {% endfor %}
+                    </ul>
                     <br>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-            
+
             <!-- ROW 1 -->
             <div class="row">
                 <div class="col-lg-12">
-                    <h4 class="card-title">PARA SU TRATAMIENTO DE DEPILACIÓN LÁSER TENGA EN CUENTA</h4>
+                    <h4 class="card-title">{{site.data.depilation.itemsTitle}}</h4>
                     <!-- Card Slider -->
                     <div class="slider-container">
                         <div class="swiper-container card-slider">
                             <div class="swiper-wrapper">
+                                {% for item in site.data.depilation.items %}
                                 <!-- Slide -->
                                 <div class="swiper-slide">
                                     <div class="card">
-                                        <img class="card-image" src="images/sol.png" alt="alternative">
+                                        <img class="card-image" src="{{item.image}}" alt="alternative">
                                         <div class="card-body">
-                                            <div class="testimonial-author">Evitar el sol</div>
-                                            <div class="testimonial-text">El sol activa la melanina de la piel. Es importante evitar broncearse hasta 10 días antes de la sesión de depilación láser.</div>
+                                            <div class="testimonial-author">{{item.name}}</div>
+                                            <div class="testimonial-text">{{item.description}}</div>
                                         </div>
                                     </div>
                                 </div> <!-- end of swiper-slide -->
                                 <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/cera.png" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Evitar rasurar</div>
-                                            <div class="testimonial-text">No hay que arrancar ni depilar el vello de raíz.</div>
-                                        </div>
-                                    </div>
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-        
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/piel.png" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Hidratación</div>
-                                            <div class="testimonial-text">Matener una hidratación elevada en las zonas que se van depilar.</div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-                                
-                                <!-- Slide -->
-                                 <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/sauna.png" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Cuida tu piel</div>
-                                            <div class="testimonial-text">Evite acudir a la sauna o el agua muy caliente en el baño hasta pasadas 24 horas.</div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/sol-2.png" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Toma el sol con precaución</div>
-                                            <div class="testimonial-text">Se recomienda no tomar el sol pasados 5 días de la sesión.</div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
-                                <!-- Slide -->
-                                <div class="swiper-slide">
-                                    <div class="card">
-                                        <img class="card-image" src="images/deporte.png" alt="alternative">
-                                        <div class="card-body">
-                                            <div class="testimonial-author">Deporte</div>
-                                            <div class="testimonial-text">Suavidad al hacer ejercicio físico, ducharse y lavar la zona tratada para no producir inflamación o enrojecimiento.</div>
-                                        </div>
-                                    </div>        
-                                </div> <!-- end of swiper-slide -->
-                                <!-- end of slide -->
-
+                                {% endfor %}
                             </div> <!-- end of swiper-wrapper -->
-        
+
                             <!-- Add Arrows -->
                             <div class="swiper-button-next"></div>
                             <div class="swiper-button-prev"></div>
                             <!-- end of add arrows -->
-        
+
                         </div> <!-- end of swiper-container -->
                     </div> <!-- end of sliedr-container -->
                     <!-- end of card slider -->
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
- 
+
             <br>
         </div> <!-- end of container -->
     </div> <!-- end of slider -->
-    <!-- end of testimonials -->
+    <!-- end of Depilacion -->
 
     <!-- tarifas -->
     <div id="tarifas" class="form-1">
         <div class="container">
             <div class="row"></div>
-                <div class="section-title">TARIFAS LASER DIODO</div>
-                <div class="image-container">
-                    <img class="img-fluid" src="images/precios.png" alt="alternative">
-                </div> <!-- end of image-container -->
-                <div class="text-container">
-                    <p>*<a href="#location">Contacta</a> con nosotros para obtener más información y ofertas de temporada.</p>
-                </div> <!-- end of text-container -->    
-            </div>
-        </div> <!-- end of container -->
+            <div class="section-title">TARIFAS LASER DIODO</div>
+            <div class="image-container">
+                <img class="img-fluid" src="images/precios.png" alt="alternative">
+            </div> <!-- end of image-container -->
+            <div class="text-container">
+                <p>*<a href="#location">Contacta</a> con nosotros para obtener más información y ofertas de temporada.
+                </p>
+            </div> <!-- end of text-container -->
+        </div> <!-- end of text-container -->
+    </div> <!-- end of text-container -->
+    </div>
+    </div> <!-- end of container -->
     </div> <!-- end of form-1 -->
     <!-- end of tarifas -->
 
 
     <!-- location -->
-	<div id="location" class="filter">
-		<div class="container">
+    <div id="localizacion" class="filter">
+        <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="section-title">¿DÓNDE ESTAMOS?</div>
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
-		</div> <!-- end of container -->
-            
-
-    <!-- Details 1 -->
-	<div id="details" class="accordion">
-        <iframe class="area-1" src="https://maps.google.com/maps?q=Calle%20de%20Portugal,%2044,%2028943%20Fuenlabrada,%20Madrid&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0">
-		</iframe><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><div class="area-2">
-
-            <!-- Accordion -->
-            <div class="accordion-container" id="accordionOne">
-                <div class="item">
-                    <div id="headingOne">
-                        <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" role="button">
-                            <span class="circle-numbering"><i class="fas fa-map-marker-alt"></i></span><span class="accordion-title">Calle Portugal, 44</span>
-                        </span>
-                    </div>
-                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Horario: De Lunes a Sabado de 9:00 a 20:00.
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            
-                <div class="item">
-                    <div id="headingTwo">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" role="button">
-                            <span class="circle-numbering"><i class="fas fa-envelope"></i></span><span class="accordion-title">fuenlabrada@centrosellael.com</span>
-                        </span>
-                    </div>
-                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Contacta con nosotros a cualquier hora a través de <a href="mailto:fuenlabrada@centrosellael.com">fuenlabrada@centrosellael.com</a>.
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-            
-                <div class="item">
-                    <div id="headingThree">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" role="button">
-                            <span class="circle-numbering"><i class="fas fa-phone"></i></span><span class="accordion-title">646 19 64 72</span>
-                        </span>
-                    </div>
-                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Contacta con nosotros a través de Whatsapp o llamando a <a href="tel:0034646196472">646 19 64 72</a>. 
-                        </div>
-                    </div>
-                </div> <!-- end of item -->
-
-                <div class="item">
-                    <div id="headingThree">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour" role="button">
-                            <span class="circle-numbering"><i class="fas fa-phone"></i></span><span class="accordion-title">91 607 60 92<span>
-                        </span>
-                    </div>
-                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Contacta con nosotros llamando a <a href="tel:0034916076092">91 607 60 92</a>. 
-                        </div>
-                    </div>
-                </div><!-- end of item -->
-            </div> <!-- end of accordion-container -->
-            <!-- end of accordion -->
-		</div> <!-- end of area-2 -->
-    </div> <!-- end of accordion -->
-    <!-- end of details 1 -->
+        </div> <!-- end of container -->
 
 
-    <div class="accordion">
-        <div class="area-1">
-            <!-- Accordion -->
-            <div class="accordion-container" id="accordionTwo">
-                <div class="item">
-                    <div id="headingOneCC">
-                        <span data-toggle="collapse" data-target="#collapseOneCC" aria-expanded="true" aria-controls="collapseOneCC" role="button">
-                            <span class="circle-numbering"><i class="fas fa-map-marker-alt"></i></span><span class="accordion-title">C.C Plaza loranca 2, Local 71</span>
-                        </span>
-                    </div>
-                    <div id="collapseOneCC" class="collapse show" aria-labelledby="headingOneCC" data-parent="#accordionTwo">
-                        <div class="accordion-body">
-                            Horario: De Lunes a Sabado de 9:00 a 22:00.
-                        </div>
-                    </div>
-                </div><!-- end of item -->
-                <div class="item">
-                    <div id="headingTwoCC">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseTwoCC" aria-expanded="false" aria-controls="collapseTwoCC" role="button">
-                            <span class="circle-numbering"><i class="fas fa-envelope"></i></span><span class="accordion-title">ccplazaloranca@centrosellael.com</span>
-                        </span>
-                    </div>
-                    <div id="collapseTwoCC" class="collapse" aria-labelledby="headingTwoCC" data-parent="#accordionTwo">
-                        <div class="accordion-body">
-                            Contacta con nosotros a cualquier hora a través de <a href="mailto:ccplazaloranca@centrosellael.com">ccplazaloranca@centrosellael.com</a>.
-                        </div>
-                    </div>
-                </div><!-- end of item -->
-                <div class="item">
-                    <div id="headingThreeCC">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseThreeCC" aria-expanded="false" aria-controls="collapseThreeCC" role="button">
-                            <span class="circle-numbering"><i class="fas fa-phone"></i></span><span class="accordion-title">722 14 62 98</span>
-                        </span>
-                    </div>
-                    <div id="collapseThreeCC" class="collapse" aria-labelledby="headingThreeCC" data-parent="#accordionTwo">
-                        <div class="accordion-body">
-                            Contacta con nosotros a través de Whatsapp o llamando a <a href="tel:0034722146298">722 14 62 98</a>.
-                        </div>
-                    </div>
-                </div><!-- end of item -->
+        <!-- Details 1 -->
+        <div id="details" class="accordion">
+            <iframe class="area-1"
+                src="https://maps.google.com/maps?q=Calle%20de%20Portugal,%2044,%2028943%20Fuenlabrada,%20Madrid&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0">
+            </iframe><!-- end of area-1 on same line and no space between comments to eliminate margin white space -->
+            <div class="area-2">
 
-                <div class="item">
-                    <div id="headingFourCC">
-                        <span class="collapsed" data-toggle="collapse" data-target="#collapseFourCC" aria-expanded="false" aria-controls="collapseFour" role="button">
-                            <span class="circle-numbering"><i class="fas fa-phone"></i></span><span class="accordion-title">91 933 26 11<span>
-                        </span>
-                    </div>
-                    <div id="collapseFourCC" class="collapse" aria-labelledby="headingFour" data-parent="#accordionOne">
-                        <div class="accordion-body">
-                            Contacta con nosotros llamando a <a href="tel:0034919332611">91 933 26 11</a>. 
+                <!-- Accordion -->
+                <div class="accordion-container" id="accordionOne">
+                    <div class="item">
+                        <div id="headingOne">
+                            <span data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                                aria-controls="collapseOne" role="button">
+                                <span class="circle-numbering"><i class="fas fa-map-marker-alt"></i></span><span
+                                    class="accordion-title">Calle Portugal, 44</span>
+                            </span>
                         </div>
-                    </div>
-                </div><!-- end of item -->
-            </div><!-- end of accordion-container -->
-            <!-- end of accordion -->
-        </div><!-- end of area-1 on same line and no space between comments to eliminate margin white space --><iframe class="area-2" src="https://maps.google.com/maps?q=C.C%20Plaza%20loranca%202,%20Local%2071&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"></iframe><!-- end of area-2 -->
-    </div><!-- end of tabs -->
-    <!-- end of details 2 -->
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
+                            data-parent="#accordionOne">
+                            <div class="accordion-body">
+                                Horario: De Lunes a Sabado de 9:00 a 20:00.
+                            </div>
+                        </div>
+                    </div> <!-- end of item -->
+
+                    <div class="item">
+                        <div id="headingTwo">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo" role="button">
+                                <span class="circle-numbering"><i class="fas fa-envelope"></i></span><span
+                                    class="accordion-title">fuenlabrada@centrosellael.com</span>
+                            </span>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionOne">
+                            <div class="accordion-body">
+                                Contacta con nosotros a cualquier hora a través de <a
+                                    href="mailto:fuenlabrada@centrosellael.com">fuenlabrada@centrosellael.com</a>.
+                            </div>
+                        </div>
+                    </div> <!-- end of item -->
+
+                    <div class="item">
+                        <div id="headingThree">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree" role="button">
+                                <span class="circle-numbering"><i class="fas fa-phone"></i></span><span
+                                    class="accordion-title">646 19 64 72</span>
+                            </span>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
+                            data-parent="#accordionOne">
+                            <div class="accordion-body">
+                                Contacta con nosotros a través de Whatsapp o llamando a <a href="tel:0034646196472">646
+                                    19 64 72</a>.
+                            </div>
+                        </div>
+                    </div> <!-- end of item -->
+
+                    <div class="item">
+                        <div id="headingThree">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseFour" role="button">
+                                <span class="circle-numbering"><i class="fas fa-phone"></i></span><span
+                                    class="accordion-title">91 607 60 92<span>
+                                    </span>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionOne">
+                            <div class="accordion-body">
+                                Contacta con nosotros llamando a <a href="tel:0034916076092">91 607 60 92</a>.
+                                Contacta con nosotros llamando a <a href="tel:0034916076092">91 607 60 92</a>.
+                                Contacta con nosotros llamando a <a href="tel:0034916076092">91 607 60 92</a>.
+                            </div>
+                        </div>
+                    </div><!-- end of item -->
+                </div> <!-- end of accordion-container -->
+                <!-- end of accordion -->
+            </div> <!-- end of area-2 -->
+        </div> <!-- end of accordion -->
+        <!-- end of details 1 -->
+
+
+        <div class="accordion">
+            <div class="area-1">
+                <!-- Accordion -->
+                <div class="accordion-container" id="accordionTwo">
+                    <div class="item">
+                        <div id="headingOneCC">
+                            <span data-toggle="collapse" data-target="#collapseOneCC" aria-expanded="true"
+                                aria-controls="collapseOneCC" role="button">
+                                <span class="circle-numbering"><i class="fas fa-map-marker-alt"></i></span><span
+                                    class="accordion-title">C.C Plaza loranca 2, Local 71</span>
+                            </span>
+                        </div>
+                        <div id="collapseOneCC" class="collapse show" aria-labelledby="headingOneCC"
+                            data-parent="#accordionTwo">
+                            <div class="accordion-body">
+                                Horario: De Lunes a Sabado de 9:00 a 22:00.
+                            </div>
+                        </div>
+                    </div><!-- end of item -->
+                    <div class="item">
+                        <div id="headingTwoCC">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseTwoCC"
+                                aria-expanded="false" aria-controls="collapseTwoCC" role="button">
+                                <span class="circle-numbering"><i class="fas fa-envelope"></i></span><span
+                                    class="accordion-title">ccplazaloranca@centrosellael.com</span>
+                            </span>
+                        </div>
+                        <div id="collapseTwoCC" class="collapse" aria-labelledby="headingTwoCC"
+                            data-parent="#accordionTwo">
+                            <div class="accordion-body">
+                                Contacta con nosotros a cualquier hora a través de <a
+                                    href="mailto:ccplazaloranca@centrosellael.com">ccplazaloranca@centrosellael.com</a>.
+                            </div>
+                        </div>
+                    </div><!-- end of item -->
+                    <div class="item">
+                        <div id="headingThreeCC">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseThreeCC"
+                                aria-expanded="false" aria-controls="collapseThreeCC" role="button">
+                                <span class="circle-numbering"><i class="fas fa-phone"></i></span><span
+                                    class="accordion-title">722 14 62 98</span>
+                            </span>
+                        </div>
+                        <div id="collapseThreeCC" class="collapse" aria-labelledby="headingThreeCC"
+                            data-parent="#accordionTwo">
+                            <div class="accordion-body">
+                                Contacta con nosotros a través de Whatsapp o llamando a <a href="tel:0034722146298">722
+                                    14 62 98</a>.
+                            </div>
+                        </div>
+                    </div><!-- end of item -->
+
+                    <div class="item">
+                        <div id="headingFourCC">
+                            <span class="collapsed" data-toggle="collapse" data-target="#collapseFourCC"
+                                aria-expanded="false" aria-controls="collapseFour" role="button">
+                                <span class="circle-numbering"><i class="fas fa-phone"></i></span><span
+                                    class="accordion-title">91 933 26 11<span>
+                                    </span>
+                        </div>
+                        <div id="collapseFourCC" class="collapse" aria-labelledby="headingFour"
+                            data-parent="#accordionOne">
+                            <div class="accordion-body">
+                                Contacta con nosotros llamando a <a href="tel:0034919332611">91 933 26 11</a>.
+                                Contacta con nosotros llamando a <a href="tel:0034919332611">91 933 26 11</a>.
+                                Contacta con nosotros llamando a <a href="tel:0034919332611">91 933 26 11</a>.
+                            </div>
+                        </div>
+                    </div><!-- end of item -->
+                </div><!-- end of accordion-container -->
+                <!-- end of accordion -->
+            </div>
+            <!-- end of area-1 on same line and no space between comments to eliminate margin white space --><iframe
+                class="area-2"
+                src="https://maps.google.com/maps?q=C.C%20Plaza%20loranca%202,%20Local%2071&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                frameborder="0"></iframe><!-- end of area-2 -->
+        </div><!-- end of tabs -->
+        <!-- end of details 2 -->
     </div> <!-- end of filter -->
     <!-- end of location -->
 
     <!-- Contact -->
-    <div id="contact" class="form-2">
+    <div id="contacto" class="form-2">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
                     <div class="text-container">
                         <div class="section-title">CONTACTO</div>
                         <h2>SOLICITA UNA PRUEBA GRATUITA DE DEPILACIÓN LÁSER DIODO</h2>
-                        <p>También puedes llamar o pasarte por nuestros centros para preguntar. Estaremos encantados de resolver tus dudas.</p>
+                        <p>También puedes llamar o pasarte por nuestros centros para preguntar. Estaremos encantados de
+                            resolver tus dudas.</p>
                         <h3>Síguenos en las redes sociales.</h3>
 
                         <span class="fa-stack">
@@ -650,7 +465,7 @@
                     </div> <!-- end of text-container -->
                 </div> <!-- end of col -->
                 <div class="col-lg-6">
-                    
+
                     <!-- Contact Form -->
                     <form id="contactForm" data-toggle="validator" data-focus="false">
                         <div class="form-group">
@@ -680,13 +495,13 @@
                             <div id="cmsgSubmit" class="h3 text-center hidden"></div>
                         </div>
                     </form>
-                    <!-- end of contact form -->
+                    <!-- end of contacto form -->
 
                 </div> <!-- end of col -->
             </div> <!-- end of row -->
         </div> <!-- end of container -->
     </div> <!-- end of form-2 -->
-    <!-- end of contact -->
+    <!-- end of contacto -->
 
     <!-- Copyright -->
     <div class="copyright">
@@ -697,10 +512,10 @@
                 </div> <!-- end of col -->
             </div> <!-- enf of row -->
         </div> <!-- end of container -->
-    </div> <!-- end of copyright --> 
+    </div> <!-- end of copyright -->
     <!-- end of copyright -->
-    
-    	
+
+
     <!-- Scripts -->
     <script src="js/jquery.min.js"></script> <!-- jQuery for Bootstrap's JavaScript plugins -->
     <script src="js/popper.min.js"></script> <!-- Popper tooltip library for Bootstrap -->
@@ -713,4 +528,5 @@
     <script src="js/validator.min.js"></script> <!-- Validator.js - Bootstrap plugin that validates forms -->
     <script src="js/scripts.js"></script> <!-- Custom scripts -->
 </body>
+
 </html>

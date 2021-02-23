@@ -1,0 +1,47 @@
+{
+	"id": "depilacion",
+	"title": "DEPILACIÓN LASER",
+	"body": "En Centros Ellael, nuestro principal objetivo siempre ha sido acercar la belleza y el cuidado personal a los bolsillos de nuestros clientes. Queremos ayudar a todos nuestros clientes a que puedan alcanzar su imagen deseada, a tener un mejor aspecto físico y a sentirse bien consigo mismos por lo que ofrecemos un asesoramiento totalmente personalizado para cada tratamiento, con el fin de que el tratamiento que elija cada uno de nuestros clientes se adapte a sus necesidades. Para todo ello contamos con precios bastante asequibles para la depilación láser.",
+	"bullets": [
+		"Laser de Diodo de 5000W de potencia",
+		"Aplicador mas grande de la historia 10 cm2",
+		"Uso simultaneo de dos aplicadores en el equipo",
+		"Refrigeración 360 grados con punta de zafiro",
+		"Impulsos mas cortos jamás alcanzados",
+		"Tecnología 100% alemana",
+		"Prácticamente indoloro."
+	],
+	"itemsTitle": "PARA SU TRATAMIENTO DE DEPILACIÓN LÁSER TENGA EN CUENTA",
+	"items": [
+		{
+			"image": "images/sol.png",
+			"name": "Evitar el sol",
+			"description": "El sol activa la melanina de la piel. Es importante evitar broncearse hasta 10 días antes de la sesión de depilación láser."
+		},
+		{
+			"image": "images/cera.png",
+			"name": "Evitar rasurar",
+			"description": "No hay que arrancar ni depilar el vello de raíz."
+		},
+		{
+			"image": "images/piel.png",
+			"name": "Hidrataciónsss",
+			"description": "Matener una hidratación elevada en las zonas que se van depilar."
+		},
+		{
+			"image": "images/sauna.png",
+			"name": "Cuida tu piel",
+			"description": "Evite acudir a la sauna o el agua muy caliente en el baño hasta pasadas 24 horas."
+		},
+		{
+			"image": "images/sol-2.png",
+			"name": "Toma el sol con precaución",
+			"description": "Se recomienda no tomar el sol pasados 5 días de la sesión."
+		},
+		{
+			"image": "images/deporte.png",
+			"name": "Deporte",
+			"description": "Suavidad al hacer ejercicio físico, ducharse y lavar la zona tratada para no producir inflamación o enrojecimiento."
+		}
+	]
+}

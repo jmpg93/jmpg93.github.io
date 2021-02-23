@@ -1,0 +1,67 @@
+{
+    "id": "tratamientos",
+    "title": "Tratamientos",
+	"body": "Ofrecemos todo tipo de tratamientos",
+	"sections": [
+		{
+			"title": "Tratamientos Faciales",
+			"items": [
+				{
+					"image": "images/preso.png",
+					"name": "LIMPIEZA FACIAL",
+					"description": "Ideal para restablecer el PH de la piel y limpiarla de las impurezas provocadas del día a día.",
+					"price": 45,
+					"bullets": []
+				},
+				{
+					"image": "images/preso.png",
+					"name": "TRATAMIENTO GLACIAR",
+					"description": "",
+					"price": 40,
+					"bullets": [
+						"Previene la perdida de agua.",
+						"Mantiene un film hidrolipídico natural en niveles óptimos de equilibrio.",
+						"Estimula y restablece los mecanismos de auto hidratación propios de la piel.",
+						"La piel se siente mas fresca, suave, flexible y confortable."
+					]
+				},
+				{
+					"image": "images/preso.png",
+					"name": "TRATAMIENTO BALANCE",
+					"description": "",
+					"price": 40,
+					"bullets": [
+						"Depura la obstrucción de los poros.", 
+						"Regula el exceso de sebo",
+						"Restaura el equilibrio de la piel",
+						"Alivia y calma la irritación"
+					]
+				},
+				{
+					"image": "images/preso.png",
+					"name": "TRATAMIENTO VITAMINA C",
+					"description": "",
+					"price": 50,
+					"bullets": [
+						"Posee increíbles propiedades antioxidantes que neutralizan el deterioro sufrido por las células expuestas al daño de los radicales libres.",
+						"Favorece la capacidad regenerativa natural de la piel, activando la síntesis de colágeno.",
+						"Su intenso efecto renovador ralentiza de manera eficaz los procesos de envejecimiento cutáneo (arrugas, flacidez, imperfecciones, manchas).",
+						"La piel se siente oxigenada, llena de energía, de nuevo elástica y más luminosa, con un tono uniforme."
+					]
+				},
+				{
+					"image": "images/preso.png",
+					"name": "MY CODE FACIAL",
+					"description": "La belleza tiene un código. El auténtico tratamiento individualizado a la medida de cada cliente.",
+					"price": 75,
+					"bullets": [
+						"Tratamiento facial antiedad personalizado.",
+						"Prevenir y corregir de forma global los efectos que provoca el envejecimiento cutáneo en rostro, cuello y escote.",
+						"Personalizado, mediante un código antiedad único, que trata en profundidad las necesidades de la piel en cada momento, devolviéndole sus condiciones óptimas.",
+						"Concentrados faciales con una «acción diana» sobre las disfunciones que afectan a la estructura de la piel. "
+					]
+				}
+			]
+		}
+	]
+}
