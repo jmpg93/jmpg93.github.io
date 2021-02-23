@@ -1,64 +1,151 @@
 {
-    "id": "tratamientos",
-    "title": "Tratamientos",
+	"id": "tratamientos",
+	"title": "Tratamientos",
 	"body": "Ofrecemos todo tipo de tratamientos",
 	"sections": [
 		{
-			"title": "Tratamientos Faciales",
+			"title": "Tratamientos faciales",
 			"items": [
 				{
-					"image": "images/preso.png",
+					"image": "images/facial-2.png",
 					"name": "LIMPIEZA FACIAL",
 					"description": "Ideal para restablecer el PH de la piel y limpiarla de las impurezas provocadas del día a día.",
 					"price": 45,
 					"bullets": []
 				},
 				{
-					"image": "images/preso.png",
-					"name": "TRATAMIENTO GLACIAR",
-					"description": "",
-					"price": 40,
+					"image": "images/quimico.jpg",
+					"name": "DERMACURE",
+					"description": "Programa de renovación celular. Exfoliación química.",
+					"price": 75,
 					"bullets": [
-						"Previene la perdida de agua.",
-						"Mantiene un film hidrolipídico natural en niveles óptimos de equilibrio.",
-						"Estimula y restablece los mecanismos de auto hidratación propios de la piel.",
-						"La piel se siente mas fresca, suave, flexible y confortable."
+						"Acelera la renovación celular.",
+						"Resultados visibles de inmediato.",
+						"Piel mas suave, textura lisa, tacto uniforme y un aspecto luminoso"
 					]
 				},
 				{
-					"image": "images/preso.png",
+					"image": "images/facial-3.png",
 					"name": "TRATAMIENTO BALANCE",
 					"description": "",
 					"price": 40,
 					"bullets": [
-						"Depura la obstrucción de los poros.", 
+						"Depura la obstrucción de los poros.",
 						"Regula el exceso de sebo",
 						"Restaura el equilibrio de la piel",
 						"Alivia y calma la irritación"
 					]
 				},
 				{
-					"image": "images/preso.png",
-					"name": "TRATAMIENTO VITAMINA C",
+					"image": "images/glacial.png",
+					"name": "TRATAMIENTO GLACIAR",
 					"description": "",
-					"price": 50,
+					"price": 40,
 					"bullets": [
-						"Posee increíbles propiedades antioxidantes que neutralizan el deterioro sufrido por las células expuestas al daño de los radicales libres.",
-						"Favorece la capacidad regenerativa natural de la piel, activando la síntesis de colágeno.",
-						"Su intenso efecto renovador ralentiza de manera eficaz los procesos de envejecimiento cutáneo (arrugas, flacidez, imperfecciones, manchas).",
-						"La piel se siente oxigenada, llena de energía, de nuevo elástica y más luminosa, con un tono uniforme."
+						"Previene la perdida de agua.",
+						"Mantiene un film hidrolipídico natural en niveles óptimos de equilibrio.",
+						"Estimula y restablece los mecanismos de hidratación de la piel.",
+						"Piel se siente mas fresca, suave, flexible y confortable."
 					]
 				},
 				{
-					"image": "images/preso.png",
+					"image": "images/vitamina-c.png",
+					"name": "TRATAMIENTO VITAMINA C",
+					"description": "Su intenso efecto renovador ralentiza de manera eficaz los procesos de envejecimiento cutáneo (arrugas, flacidez, imperfecciones, manchas).",
+					"price": 50,
+					"bullets": [
+						"Antioxidante que neutraliza el deterioro de las células.",
+						"Favorece la regeneración de la piel.",
+						"La piel se siente oxigenada",
+						"Porporciona elasticidad y luminosidad a la piel."
+					]
+				},
+				{
+					"image": "images/facial.png",
 					"name": "MY CODE FACIAL",
 					"description": "La belleza tiene un código. El auténtico tratamiento individualizado a la medida de cada cliente.",
 					"price": 75,
 					"bullets": [
 						"Tratamiento facial antiedad personalizado.",
-						"Prevenir y corregir de forma global los efectos que provoca el envejecimiento cutáneo en rostro, cuello y escote.",
-						"Personalizado, mediante un código antiedad único, que trata en profundidad las necesidades de la piel en cada momento, devolviéndole sus condiciones óptimas.",
-						"Concentrados faciales con una «acción diana» sobre las disfunciones que afectan a la estructura de la piel. "
+						"Prevenir y corregir el envejecimiento cutáneo en rostro, cuello y escote."
+					]
+				},
+				{
+					"image": "images/ojos.jpg",
+					"name": "ONLY FOR EYES",
+					"description": "Tratamiento global para el contorno de ojos",
+					"price": 65,
+					"bullets": [
+						"Previene, trata y repara todos los signos propios del envejecimiento y la fatiga.",
+						"Actúa de forma intensiva y localizada.",
+						"Elimina arrugas, líneas de expresión, bolsas, ojeras y manchas, la fatiga, el cansancio y la deshidratación."
+					]
+				}
+			]
+		},
+		{
+			"title": "Tratamientos con aparatología",
+			"items": [
+				{
+					"image": "images/preso.png",
+					"name": "PRESOTERAPIA",
+					"description": "Estimular el sistema circulatorio y linfático de cada zona corporal de forma específica, eliminando el exceso de fluidos superficiales.",
+					"price": 40,
+					"bullets": [
+						"Mejora circulación",
+						"Favorece la eliminación de toxinas",
+						"Reduce hinchazón.",
+						"Ayuda a eliminar líquidos.",
+						"Es indoloro y no invasivo"
+					]
+				},
+				{
+					"image": "images/quimico-2.jpg",
+					"name": "TRATAMIENTO TANIT",
+					"description": "Filtro Solar Hidratante crema protectora especial para la prevención de manchas oscuras de la pie.",
+					"price": 40,
+					"bullets": [
+						"Elimina manchas",
+						"Porporciona elasticidad y luminosidad a la piel."
+					]
+				},
+				{
+					"image": "images/hebe.jpg",
+					"name": "TRATAMIENTO HEBE",
+					"description": "El tratamiento de regeneración celular",
+					"price": 75,
+					"bullets": [
+					]
+				},
+			]
+		},
+		{
+			"title": "Tratamientos corporales",
+			"items": [
+				{
+					"image": "images/body-2.png",
+					"name": "MY CODE CORPORAL",
+					"description": "Tratamiento corporal personalizado mediante un código único para prevenir y combatir de forma específica los problemas corporales más comunes:",
+					"price": 75,
+					"bullets": [
+						"Celulitis",
+						"Flacidez",
+						"Retención de líquidos",
+						"Exceso de volumen",
+						"Estrías",
+						"Mala circulación"
+					]
+				},
+				{
+					"image": "images/masaje.png",
+					"name": "MASAJE",
+					"description": "30 o 60 minutos.",
+					"price": 40,
+					"bullets": [
+						"Relajantes",
+						"Descontracturantes",
+						"Anticeluliticos",
+						"Reafirmantes"
 					]
 				}
 			]

@@ -168,65 +168,6 @@
 		}
     });
 
-
-    /* Call Me Form */
-    $("#callMeForm").validator().on("submit", function(event) {
-    	if (event.isDefaultPrevented()) {
-            // handle the invalid form...
-            lformError();
-            lsubmitMSG(false, "Completa los campos.");
-        } else {
-            // everything looks good!
-            event.preventDefault();
-            lsubmitForm();
-        }
-    });
-
-    function lsubmitForm() {
-        // initiate variables with form content
-		var name = $("#lname").val();
-		var phone = $("#lphone").val();
-		var email = $("#lemail").val();
-		var select = $("#lselect").val();
-        var terms = $("#lterms").val();
-        
-        $.ajax({
-            type: "POST",
-            url: "php/callmeform-process.php",
-            data: "name=" + name + "&phone=" + phone + "&email=" + email + "&select=" + select + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    lformSuccess();
-                } else {
-                    lformError();
-                    lsubmitMSG(false, text);
-                }
-            }
-        });
-	}
-
-    function lformSuccess() {
-        $("#callMeForm")[0].reset();
-        lsubmitMSG(true, "Request Submitted!");
-        $("input").removeClass('notEmpty'); // resets the field label after submission
-    }
-
-    function lformError() {
-        $("#callMeForm").removeClass().addClass('shake animated').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function() {
-            $(this).removeClass();
-        });
-	}
-
-    function lsubmitMSG(valid, msg) {
-        if (valid) {
-            var msgClasses = "h3 text-center tada animated";
-        } else {
-            var msgClasses = "h3 text-center";
-        }
-        $("#lmsgSubmit").removeClass().addClass(msgClasses).text(msg);
-    }
-
-
     /* Contact Form */
     $("#contactForm").validator().on("submit", function(event) {
     	if (event.isDefaultPrevented()) {
@@ -244,12 +185,13 @@
         // initiate variables with form content
 		var name = $("#cname").val();
 		var email = $("#cemail").val();
+        var phone = $("#cphone").val();
         var message = $("#cmessage").val();
         var terms = $("#cterms").val();
         $.ajax({
             type: "POST",
             url: "php/contactform-process.php",
-            data: "name=" + name + "&email=" + email + "&message=" + message + "&terms=" + terms, 
+            data: "name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message + "&terms=" + terms, 
             success: function(text) {
                 if (text == "success") {
                     cformSuccess();
@@ -340,7 +282,6 @@
         $("#pmsgSubmit").removeClass().addClass(msgClasses).text(msg);
     }
     
-
     /* Back To Top Button */
     // create the back to top button
     $('body').prepend('<a href="body" class="back-to-top page-scroll">Back to Top</a>');

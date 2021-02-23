@@ -1,0 +1,42 @@
+{
+    "id": "localizacion",
+    "title": "¿DÓNDE ESTAMOS?",
+    "portugal": {
+        "location": {
+            "value": "Calle Portugal, 44",
+            "details": "Horario: De Lunes a Sabado de 9:00 a 20:00."
+        },
+        "email": {
+            "value": "fuenlabrada@centrosellael.com",
+            "details": "Contacta con nosotros a cualquier hora a través de nuestro email"
+        },
+        "mobile": {
+            "value": "646 19 64 72",
+            "details": "Contacta con nosotros a través de Whatsapp o llamando al"
+        },
+        "landline": {
+            "value": "91 607 60 92",
+            "details": "Contacta con nosotros llamando al"
+        },
+        "locationURL": "https://maps.google.com/maps?q=Calle%20de%20Portugal,%2044,%2028943%20Fuenlabrada,%20Madrid&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    },
+    "loranca": {
+        "location": {
+            "value": "C.C Plaza loranca 2, Local 71",
+            "details": "Horario: De Lunes a Sabado de 9:00 a 20:00."
+        },
+        "email": {
+            "value": "ccplazaloranca@centrosellael.com",
+            "details": "Contacta con nosotros a cualquier hora a través de nuestro email"
+        },
+        "mobile": {
+            "value": "722 14 62 98",
+            "details": "Contacta con nosotros a través de Whatsapp o llamando al"
+        },
+        "landline": {
+            "value": "91 933 26 11",
+            "details": "Contacta con nosotros llamando al"
+        },
+        "locationURL": "https://maps.google.com/maps?q=C.C%20Plaza%20loranca%202,%20Local%2071&t=&z=13&ie=UTF8&iwloc=&output=embed"
+    }
+}
