@@ -187,20 +187,23 @@
 		var email = $("#cemail").val();
         var phone = $("#cphone").val();
         var message = $("#cmessage").val();
-        var terms = $("#cterms").val();
-        $.ajax({
-            type: "POST",
-            url: "php/contactform-process.php",
-            data: "name=" + name + "&email=" + email + "&phone=" + phone + "&message=" + message + "&terms=" + terms, 
-            success: function(text) {
-                if (text == "success") {
-                    cformSuccess();
-                } else {
-                    cformError();
-                    csubmitMSG(false, text);
-                }
-            }
-        });
+        
+        Email.send({
+            SecureToken : "46c04760-37b2-4f57-99ad-0b77eac7562c",
+            To : 'jmpg93@gmail.com',
+            From : email,
+            Subject : "Mensaje de web.",
+            Body : `
+                Nombre: ${name}
+                Teléfono: ${phone}
+                Email: ${email}
+                
+                Mensaje:
+                ${message}
+            `
+        }).then(
+            message => alert(message)
+        );
 	}
 
     function cformSuccess() {
