@@ -190,7 +190,7 @@
         
         Email.send({
             SecureToken : "282963c3-be6e-4ccc-b4d6-7fb633ce081a",
-            To : 'jmpg932@gmail.com',
+            To : 'jmpg93@gmail.com',
             From : 'jmpg932@gmail.com',
             Subject : "Mensaje de web.",
             Body : `

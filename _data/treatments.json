@@ -138,12 +138,12 @@
 					"description": "Tratamiento corporal personalizado mediante un código único para prevenir y combatir de forma específica los problemas corporales más comunes:",
 					"price": 75,
 					"bullets": [
-						"Celulitis",
-						"Flacidez",
-						"Retención de líquidos",
-						"Exceso de volumen",
-						"Estrías",
-						"Mala circulación"
+						"Celulitis.",
+						"Flacidez.",
+						"Retención de líquidos.",
+						"Exceso de volumen.",
+						"Estrías.",
+						"Mala circulación."
 					]
 				},
 				{
@@ -152,10 +152,10 @@
 					"description": "30 o 60 minutos.",
 					"price": 40,
 					"bullets": [
-						"Relajantes",
-						"Descontracturantes",
-						"Anticeluliticos",
-						"Reafirmantes"
+						"Relajantes.",
+						"Descontracturantes.",
+						"Anticeluliticos.",
+						"Reafirmantes."
 					]
 				}
 			]
