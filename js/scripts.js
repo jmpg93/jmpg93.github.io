@@ -192,7 +192,7 @@
             SecureToken : "282963c3-be6e-4ccc-b4d6-7fb633ce081a",
             To : 'jmpg93@gmail.com',
             From : 'jmpg932@gmail.com',
-            Subject : "Mensaje de web.",
+            Subject : "Petición de información web.",
             Body : `
             <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
             <html xmlns="http://www.w3.org/1999/xhtml">
