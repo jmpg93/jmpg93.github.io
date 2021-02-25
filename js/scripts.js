@@ -194,12 +194,20 @@
             From : 'jmpg932@gmail.com',
             Subject : "Mensaje de web.",
             Body : `
-                Nombre: ${name}\n
-                Teléfono: ${phone}\n
-                Email: ${email}\n
-                \n
-                Mensaje:\n
-                ${message}
+            <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN">
+            <html xmlns="http://www.w3.org/1999/xhtml">
+              <head>
+            </head>
+            <body style="margin: 2rem; padding: 25; border: 0;" background="#ffffff">
+                <h3></h3>
+                <p>Nombre: ${name}</p>
+                <p>Email: ${email}</p>
+                <p>Teléfono: ${phone}</p>
+                <br>
+                <p>Mensaje:</p>
+                <p>${message}</p>
+            </body>
+            </html>
             `
         }).then(function(message) {
             if (message == "OK") {
