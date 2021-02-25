@@ -189,7 +189,7 @@
         var message = $("#cmessage").val();
         
         Email.send({
-            SecureToken : "64948cbc-a1a3-4c3c-b235-2279f618af24",
+            SecureToken : "282963c3-be6e-4ccc-b4d6-7fb633ce081a",
             To : 'jmpg93@gmail.com',
             From : email,
             Subject : "Mensaje de web.",
