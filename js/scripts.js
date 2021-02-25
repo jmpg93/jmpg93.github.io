@@ -194,11 +194,11 @@
             From : 'jmpg932@gmail.com',
             Subject : "Mensaje de web.",
             Body : `
-                Nombre: ${name}
-                Teléfono: ${phone}
-                Email: ${email}
-                
-                Mensaje:
+                Nombre: ${name}\n
+                Teléfono: ${phone}\n
+                Email: ${email}\n
+                \n
+                Mensaje:\n
                 ${message}
             `
         }).then(function(message) {
