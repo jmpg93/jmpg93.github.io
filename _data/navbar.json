@@ -10,18 +10,17 @@
         {
             "title": "ESTÉTICA AVANZADA",
             "link": "#estetica-avanzada",
-            "dropdowns": []
-        },
-        {
-            "title": "TRATAMIENTOS",
-            "link": "#tratamientos",
             "dropdowns": [
                 {
-                    "title": "FACIALES",
+                    "title": "INTRO",
+                    "link": "#estetica-avanzada"
+                },
+                {
+                    "title": "TRATAMIENTOS FACIALES",
                     "link": "#faciales"
                 },
                 {
-                    "title": "CORPORALES",
+                    "title": "TRATAMIENTOS CORPORALES",
                     "link": "#corporales"
                 },                {
                     "title": "APARATOLOGÍA",
