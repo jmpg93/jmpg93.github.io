@@ -104,13 +104,16 @@
 					]
 				},
 				{
-					"image": "images/quimico-2.jpg",
+					"image": "images/tanit.jpg",
 					"name": "TRATAMIENTO TANIT",
-					"description": "Filtro Solar Hidratante crema protectora especial para la prevención de manchas oscuras de la pie.",
+					"description": "",
 					"price": 40,
 					"bullets": [
-						"Elimina manchas",
-						"Porporciona elasticidad y luminosidad a la piel."
+						"Electro permeabilización del tejido",
+						"Regeneración dérmica y reafirmación",
+						"Reducción de tejido adiposo y fibroso",
+						" Mejora circulación y tono muscular",
+						"Tratamiento de celulitis y perdida de volumen"
 					]
 				},
 				{
@@ -119,11 +122,13 @@
 					"description": "El tratamiento de regeneración celular",
 					"price": 75,
 					"bullets": [
-						"Disminución de arrugas.",
-						"Reducción de inflimación, edema y hematomas.",
+						"Antienvejecimiento: disminución de arrugas",
+						"Mejora de acúmulos adiposos y tejidos fibrosos.",
+						"Reducción de la inflamación, edema y hematomas.",
+						"Exceso de volumen.",
 						"Regeneración celular",
-						"Reafirmación de la piel",
-						"Acelera el proceso de recuperación post-cirugía."
+						"Reafirmación de la piel.",
+						"Aceleración de los procesos de recuperación post-cirugia"
 					]
 				}
 			]
