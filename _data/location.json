@@ -4,7 +4,7 @@
     "portugal": {
         "location": {
             "value": "Calle Portugal, 44",
-            "details": "Horario: De Lunes a Sabado de 9:00 a 20:00."
+            "details": "Horario: De Lunes a Sabado de 9:00 a 21:00."
         },
         "email": {
             "value": "fuenlabrada@centrosellael.com",
@@ -23,7 +23,7 @@
     "loranca": {
         "location": {
             "value": "C.C Plaza loranca 2, Local 71",
-            "details": "Horario: De Lunes a Sabado de 9:00 a 20:00."
+            "details": "Horario: De Lunes a Sabado de 10:00 a 22:00. Domingos y festivos de 11:00 a 21:00."
         },
         "email": {
             "value": "ccplazaloranca@centrosellael.com",
