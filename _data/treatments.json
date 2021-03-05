@@ -107,7 +107,7 @@
 					"image": "images/tanit.jpg",
 					"name": "TRATAMIENTO TANIT",
 					"description": "",
-					"price": 40,
+					"price": 99,
 					"bullets": [
 						"Electro permeabilización del tejido",
 						"Regeneración dérmica y reafirmación",
@@ -120,7 +120,7 @@
 					"image": "images/hebe.jpg",
 					"name": "TRATAMIENTO HEBE",
 					"description": "El tratamiento de regeneración celular",
-					"price": 75,
+					"price": 99,
 					"bullets": [
 						"Antienvejecimiento: disminución de arrugas",
 						"Mejora de acúmulos adiposos y tejidos fibrosos.",
