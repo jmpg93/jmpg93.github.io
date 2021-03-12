@@ -824,6 +824,10 @@ input[type='checkbox'] {
 	margin-bottom: 0.5rem;
 }
 
+.treatment-section-title {
+	margin-left: 1rem;
+}
+
 .basic-1 h2 {
 	margin-bottom: 1.375rem;
 }
